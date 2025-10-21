@@ -11,3 +11,7 @@ emitter.on('utilisateurConnecté', (data) => {
 
 // Émettre (déclencher) l'événement
 emitter.emit('utilisateurConnecté', { id: 1, nom: "Ossama" });
+//1)L'événement est perdu. EventEmitter ne stocke pas l'historique des événements. Les écouteurs doivent être enregistrés AVANT l'émission.
+//2)Tous les écouteurs enregistrés seront appelés dans l'ordre d'enregistrement.
+//Résulta :
+        //Nouvelle Connexion : Ossama (1)
