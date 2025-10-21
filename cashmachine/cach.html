@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caisse Enregistreuse</title>
+    <link rel="stylesheet" href="cash.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Cash registre machine</h1>
+        
+        <div class="main-content">
+            <div class="card">
+                <h2>Articles Disponibles</h2>
+                <div class="products" id="products"></div>
+            </div>
+
+            <div class="card">
+                <h2>Panier d'Achat</h2>
+                <div id="cart">
+                    <div class="cart-empty">Votre panier est vide</div>
+                </div>
+                <button class="clear-cart-btn" id="clearCart" style="display: none;">Vider le panier</button>
+                
+                <div class="totals" id="totals" style="display: none;">
+                    <div class="total-line">
+                        <span>Sous-total:</span>
+                        <span id="subtotal">0</span>
+                    </div>
+                    <div class="total-line discount" id="discountLine" style="display: none;">
+                        <span>Réduction (10%):</span>
+                        <span id="discount">0</span>
+                    </div>
+                    <div class="total-line final">
+                        <span>Total:</span>
+                        <span id="total">0</span>
+                    </div>
+                </div>
+
+                <div class="payment-section">
+                    <div class="payment-input">
+                        <input type="number" id="paymentAmount" placeholder="Montant du paiement" min="0" step="0.01">
+                        <button class="pay-btn" id="payBtn">Payer</button>
+                    </div>
+                    <div id="message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="cash.js"></script>
+</body>
+</html>
