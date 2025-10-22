@@ -19,3 +19,24 @@ const server = http.createServer((req, res) => {
 
 // Démarrage du serveur
 server.listen(PORT, () => console.log(`Serveur sur le port ${PORT} ...`));
+
+
+
+//1. Que signifie "non-bloquant" dans le contexte du module fs ?
+//Non-bloquant signifie que les opérations d'entrée/sortie ne bloquent pas l'exécution du code.
+//2. Comment les événements permettent-ils de découpler les modules ?
+//Les événements créent une communication indirecte via le pattern Observer/Pub-Sub.
+//3. Pourquoi un serveur HTTP Node peut-il gérer des milliers de connexions avec un seul thread ?
+//Grâce à l'Event Loop et au modèle asynchrone non-bloquant.
+//Principe :
+
+//1 thread principal pour JavaScript
+//I/O déléguées au système (via libuv)
+//Callbacks appelées quand les I/O sont terminées
+//Pas d'attente : pendant une I/O, le thread traite d'autres requêtes
+//4. Quelle serait la prochaine étape ?
+//A. Express.js
+
+//Framework web pour simplifier le routage
+//Gestion automatique du JSON
+//Middleware intégrés
