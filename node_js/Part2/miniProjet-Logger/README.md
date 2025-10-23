@@ -4,6 +4,14 @@
     =>Abdelaaziz Khouda
     =>Youness Elkhatib 
 }
+🗂️ Structure du projet : 
+miniProjet-Logger/
+│
+├── logger.js          # Classe Logger (EventEmitter)
+├── monitor.js         # Script de surveillance système
+├── server.js          # Serveur HTTP
+├── log.txt            # Fichier de logs (généré automatiquement)
+└── README.md          # Documentation
 # 🖥 Node System Logger — Mini Project
 
 ## 📘 Description
