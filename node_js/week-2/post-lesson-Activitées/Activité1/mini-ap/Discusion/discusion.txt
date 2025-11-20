@@ -1,0 +1,41 @@
+Activité 1
+1)Qu’apportes-tu en termes de clarté et de maintenabilité :
+Une architecture modulaire (routes, contrôleurs, services) améliore la lisibilité du code, facilite sa compréhension et limite les dépendances.
+Elle rend l’application plus simple à maintenir et à faire évoluer sans impacter l’ensemble.
+2)Quels fichiers changeraient le plus souvent si l’API évolue
+Les fichiers qui changent le plus sont les routes, contrôleurs et services, car ils contiennent la logique métier évolutive.
+Ce sont eux qui s’adaptent lorsque l’API s’enrichit de nouvelles fonctions.
+
+Activité 2
+1)Qu’est-ce qu’un endpoint REST bien conçu
+Un bon endpoint REST utilise les bonnes méthodes HTTP, renvoie des statuts adaptés et suit une structure claire et cohérente.
+Il représente une ressource de façon explicite et renvoie des réponses standardisées, facilitant l’intégration client.
+2)Pourquoi l’idempotence est-elle importante dans une API
+
+L’idempotence garantit qu’une requête répétée produit le même résultat, renforçant la fiabilité du système.
+Elle permet de gérer sans risque les demandes dupliquées, souvent dues à des erreurs réseau.
+
+Activité 3
+1)Quelle est la différence entre un middleware global et local
+Un middleware global s’applique à toutes les routes, tandis qu’un middleware local ne concerne que certaines routes spécifiques.
+Cela permet d’optimiser l’exécution et de n’activer certaines règles que lorsque nécessaire.
+2)Pourquoi la réutilisabilité est-elle une force des middlewares
+La réutilisabilité permet d’utiliser un middleware dans plusieurs contextes sans dupliquer le code.
+Cela assure cohérence, réduction des erreurs et maintenance facilitée.
+
+Activité 4
+1)Pourquoi séparer la logique d’erreur du code métier ?
+Séparer la logique d’erreur du code métier rend le code plus clair et évite de le surcharger.
+Cela permet une gestion centralisée, uniforme et plus simple à maintenir.
+
+2)Qu’apporte la cohérence des messages d’erreur côté client
+Des messages d’erreur cohérents facilitent le diagnostic côté client et améliorent l’expérience de développement.
+Ils garantissent une communication claire, régulière et professionnelle entre API et client.
+
+Activité 5
+1)Comment éviter le blocage du thread lors de la lecture de fichier
+On évite le blocage en utilisant des fonctions de lecture asynchrones, qui laissent le serveur répondre à d’autres requêtes.
+Cela améliore la performance et la scalabilité de l’application.
+2)Quelle est la différence entre readFileSync et fs.promises.readFile
+readFileSync bloque le thread jusqu’à la fin de la lecture, tandis que fs.promises.readFile l’exécute de manière asynchrone.
+La version asynchrone est recommandée en production pour éviter toute interruption du traitement.
