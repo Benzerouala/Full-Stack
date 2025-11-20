@@ -1,0 +1,14 @@
+import { useEffect, useState } from "react"
+
+const ClickCounter = () => {
+    const [count, setState] = useState(0);
+    useEffect(() => {
+          document.title = `Clicks: ${count}`;
+        }, [count]);
+        return (
+    <div className="counter">
+      <button className="button" onClick={() => setState(prev => prev + 1)}>Click</button>
+    </div> 
+  )
+}
+export default ClickCounter ;
