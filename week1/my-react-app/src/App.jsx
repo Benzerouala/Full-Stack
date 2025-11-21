@@ -7,6 +7,7 @@ import { CounterButton } from './components/day2/CounterButton'
 import { HookUseCounter } from './components/day3/HookUseCounter'
 import { ThemeSelector } from './components/day3/ThemeSelector'
 import { Panier } from './components/day3/Panier'
+import { Formulaire } from './components/day4/Formulaire'
 function App() {
   const  [users,setusers]=  useState([
   {
@@ -50,9 +51,10 @@ function App() {
       <ProfilCard  user={user} handledelte={handledelte}/>
       ))}
       <CounterButton /> */}
-      <HookUseCounter/> 
+      {/* <HookUseCounter/> 
       <ThemeSelector/> 
-      <Panier/>
+      <Panier/> */}
+      <Formulaire/>
     </>
   )
 }
