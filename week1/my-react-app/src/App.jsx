@@ -54,7 +54,8 @@ function App() {
       {/* <HookUseCounter/> 
       <ThemeSelector/> 
       <Panier/> */}
-      <Formulaire/>
+      {/* <Formulaire/> */}
+      
     </>
   )
 }
