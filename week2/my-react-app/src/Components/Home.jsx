@@ -7,10 +7,8 @@ export default function Home() {
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Email:", email);
-        console.log("Password:", password);
         if (!email.includes("@")) {
-            alert("L'email doit contenir @");
+            alert(" darori le @");
             return ;
           }
         navigate('/admin')
