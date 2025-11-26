@@ -5,7 +5,7 @@ export const userss = [ {
     }, 
     { 
         id: 2, 
-        nom: "Abdelazize", 
+        nom: "Abdelazize Khouda", 
         message: "Pouvez-vous vérifier mon dernier rapport ?"
      }, 
      {
@@ -15,12 +15,12 @@ export const userss = [ {
          }, 
          { 
             id: 4, 
-            nom: "Saad", 
+            nom: "Saad ", 
             message: "La mise à jour du système est prête." 
         }, 
         {
              id: 5, 
-             nom: "youness", 
+             nom: "Younes El khatib", 
              message: "Merci pour votre aide !" 
             } 
         ];
