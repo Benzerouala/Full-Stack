@@ -13,23 +13,26 @@ import AdminLayout from './Components/admin/AdminLayout'
 import AdminUsers from './Components/admin/AdminUsers'
 import AdminRoles from './Components/admin/AdminRoles'
 import NotFoundPage from './Components/errors/NotFoundPage'
+import { Users } from './Components/User/Users'
+import Userid from './Components/User/Userid'
 function App() {
     const routes = {
       '/':<Home/>,
       '/about':<About/>
     }
     // const [path, setPath] = useState(window.location.pathname)
-    const [path, setPath] = useState(window.location.hash.replace('#', '') || '/')
-    const [fullUrl, setFullUrl] = useState(window.location.href)
-     const navigate = (to) => {
-    // window.history.pushState({}, '', to) 
-    window.location.hash = to
-    setPath(to)                           
-  }
+  //   const [path, setPath] = useState(window.location.hash.replace('#', '') || '/')
+  //   const [fullUrl, setFullUrl] = useState(window.location.href)
+  //    const navigate = (to) => {
+  //   // window.history.pushState({}, '', to) 
+  //   window.location.hash = to
+  //   setPath(to)                           
+  // }
   return (
   <Router>
     <Menu/> 
     <Routes>
+
       <Route path='/' element={<Home/>}/>
       <Route path='/Contact' element={<Contact/>}/>
       <Route path='/Services' element={<Services/>}/> 
@@ -43,6 +46,8 @@ function App() {
           <Route path="roles" element={<AdminRoles />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/users" element={<Users />} />
+        <Route path='/user/:id' element={<Userid/>} />
     </Routes>
   </Router>
   
